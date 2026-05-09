@@ -8,13 +8,16 @@ let package = Package(
     products: [
         .library(
             name: "SwiftGodot",
-            targets: ["SwiftGodot"])
+            targets: ["SwiftGodot", "GDExtension"])
     ],
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.3/SwiftGodot.xcframework.zip",
-            checksum: "0675c315a8eba080386c2a15c64308332a3364dc56790ecec669217d7dcd1186"),
-        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot"]),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.4/SwiftGodot.xcframework.zip",
+            checksum: "7a9795cbc25025d9f52f957f12fc473c84f9588e02b9d3947d92e5fefe8f4096"),
+        .target(
+            name: "GDExtension",
+            path: "Sources/GDExtension"),
+        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "GDExtension"]),
     ]
 )
