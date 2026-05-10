@@ -24,8 +24,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.7/SwiftGodot.xcframework.zip",
-            checksum: "3a9ad7f4e6a547a9f5def3e7023cb5a942bf68bb350951377e9b2f4a47cef5da"),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.8/SwiftGodot.xcframework.zip",
+            checksum: "0728c39107bbfed83c17e1dc85114d26240c1e5339874263a464afc568a8ff5c"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
