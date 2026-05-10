@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "SwiftGodot",
-            targets: ["SwiftGodot", "GDExtension"]),
+            targets: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension"]),
         .library(
             name: "SwiftGodotMacros",
             targets: ["SwiftGodotMacroLibrary"]),
@@ -24,8 +24,12 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.8/SwiftGodot.xcframework.zip",
-            checksum: "0728c39107bbfed83c17e1dc85114d26240c1e5339874263a464afc568a8ff5c"),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.10/SwiftGodot.xcframework.zip",
+            checksum: "1a31db0e2e8932496d638a8fda8909fa2c040714fed464ffd63f5659815eda44"),
+        .binaryTarget(
+            name: "SwiftGodotRuntime",
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.10/SwiftGodotRuntime.xcframework.zip",
+            checksum: "8f2fe8482c5c22f698e3e722e70141ed4a801e5de212c38ba4e020ebc1733423"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
@@ -42,6 +46,6 @@ let package = Package(
             ],
             path: "Sources/SwiftGodotMacroLibrary",
             swiftSettings: [.swiftLanguageMode(.v5)]),
-        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "GDExtension", "SwiftGodotMacroLibrary"]),
+        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension", "SwiftGodotMacroLibrary"]),
     ]
 )
