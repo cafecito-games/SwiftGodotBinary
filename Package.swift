@@ -1,4 +1,4 @@
-// swift-tools-version:6.3
+// swift-tools-version:6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import CompilerPluginSupport
@@ -24,8 +24,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.5/SwiftGodot.xcframework.zip",
-            checksum: "8e49e4a2e3d26abe02ed1b8151f158e04cfecdba63264d827f6a3801ef89667e"),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.6/SwiftGodot.xcframework.zip",
+            checksum: "2ab47b179c33bcabe62ce7f62c8093d1cf90af39012899f2e6158e4a1d12fc8b"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
