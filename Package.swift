@@ -17,16 +17,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodot.xcframework.zip",
-            checksum: "76fc7dd000cbad05f088ec4383cc0fec5ce4c67acad37de322d1bc326ac9ac69"),
+            path: "Binaries/SwiftGodot.xcframework"),
         .binaryTarget(
             name: "SwiftGodotRuntime",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodotRuntime.xcframework.zip",
-            checksum: "7f68d3ae8dc934543bb47a82ed4f274c74951cd46ce04511c76e419876779532"),
+            path: "Binaries/SwiftGodotRuntime.xcframework"),
         .binaryTarget(
             name: "SwiftGodotMacroLibrary",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodotMacros.artifactbundle.zip",
-            checksum: "55eb061a918f6324673f8d9fb78519acf4a10602513f1cf1999c82d1f41c56ef"),
+            path: "Binaries/SwiftGodotMacros.artifactbundle"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
