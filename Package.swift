@@ -1,7 +1,6 @@
 // swift-tools-version:6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
-import CompilerPluginSupport
 import PackageDescription
 
 let package = Package(
@@ -14,38 +13,23 @@ let package = Package(
         .library(
             name: "SwiftGodot",
             targets: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension"]),
-        .library(
-            name: "SwiftGodotMacros",
-            targets: ["SwiftGodotMacroLibrary"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/swiftlang/swift-syntax", from: "600.0.1"),
     ],
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.16/SwiftGodot.xcframework.zip",
-            checksum: "9b9109bfa498b28452f8db108cb511bcdea3e979d625fb0295a8696998dcbc03"),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodot.xcframework.zip",
+            checksum: "76fc7dd000cbad05f088ec4383cc0fec5ce4c67acad37de322d1bc326ac9ac69"),
         .binaryTarget(
             name: "SwiftGodotRuntime",
-            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.16/SwiftGodotRuntime.xcframework.zip",
-            checksum: "fd15bce9b8e857e7b0ead57d9d520c5a5214484e97313398475e43ac68c60f60"),
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodotRuntime.xcframework.zip",
+            checksum: "7f68d3ae8dc934543bb47a82ed4f274c74951cd46ce04511c76e419876779532"),
+        .binaryTarget(
+            name: "SwiftGodotMacroLibrary",
+            url: "https://github.com/cafecito-games/SwiftGodot/releases/download/0.0.0-test.20/SwiftGodotMacros.artifactbundle.zip",
+            checksum: "55eb061a918f6324673f8d9fb78519acf4a10602513f1cf1999c82d1f41c56ef"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
-        .macro(
-            name: "SwiftGodotMacroLibrary",
-            dependencies: [
-                .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
-                .product(name: "SwiftSyntax", package: "swift-syntax"),
-                .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
-                .product(name: "SwiftDiagnostics", package: "swift-syntax"),
-                .product(name: "SwiftParserDiagnostics", package: "swift-syntax"),
-                .product(name: "SwiftParser", package: "swift-syntax"),
-                .product(name: "SwiftBasicFormat", package: "swift-syntax"),
-            ],
-            path: "Sources/SwiftGodotMacroLibrary",
-            swiftSettings: [.swiftLanguageMode(.v5)]),
-        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension", "SwiftGodotMacroLibrary"]),
+        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension"]),
     ]
 )
