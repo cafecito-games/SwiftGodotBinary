@@ -12,7 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "SwiftGodot",
-            targets: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension"]),
+            targets: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension", "SwiftGodotMacroLibrary"]),
     ],
     targets: [
         .binaryTarget(
