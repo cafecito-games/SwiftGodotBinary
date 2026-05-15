@@ -1,26 +1,19 @@
 {
-  "version": "0.1.0-rc3",
+  "version": "0.1.0-rc4",
   "sourceRepo": "cafecito-games/SwiftGodot",
   "artifacts": [
     {
       "name": "SwiftGodot",
       "file": "SwiftGodot.xcframework.zip",
-      "url": "https://github.com/cafecito-games/SwiftGodot/releases/download/0.1.0-rc3/SwiftGodot.xcframework.zip",
-      "checksum": "3e0f19bdc22d635963ee8465874b4f6d562b4e07abf395ab1bdcac08ef8b1b22",
+      "url": "https://github.com/cafecito-games/SwiftGodot/releases/download/0.1.0-rc4/SwiftGodot.xcframework.zip",
+      "checksum": "b19adcdfa913016708942a87402d78a92cb1c7440a66b1fad5c1ebb4154f5dc2",
       "localPath": "Binaries/SwiftGodot.xcframework"
-    },
-    {
-      "name": "SwiftGodotRuntime",
-      "file": "SwiftGodotRuntime.xcframework.zip",
-      "url": "https://github.com/cafecito-games/SwiftGodot/releases/download/0.1.0-rc3/SwiftGodotRuntime.xcframework.zip",
-      "checksum": "59f79d80aabff8cee45b8f2b4785c96033c45c46ab1dfc03fc479255291cd53c",
-      "localPath": "Binaries/SwiftGodotRuntime.xcframework"
     },
     {
       "name": "SwiftGodotMacroLibrary",
       "file": "SwiftGodotMacros.artifactbundle.zip",
-      "url": "https://github.com/cafecito-games/SwiftGodot/releases/download/0.1.0-rc3/SwiftGodotMacros.artifactbundle.zip",
-      "checksum": "58dae68c2b9bc5b7c73f9408471d6358695908d5a0fa677cf451926360ea24b4",
+      "url": "https://github.com/cafecito-games/SwiftGodot/releases/download/0.1.0-rc4/SwiftGodotMacros.artifactbundle.zip",
+      "checksum": "6feefd90d211e913ace7bd3c376510875619ce19c889cc77fa23e47d946526a2",
       "localPath": "Binaries/SwiftGodotMacros.artifactbundle"
     }
   ]

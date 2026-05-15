@@ -10,23 +10,23 @@ let package = Package(
         .iOS(.v17),
     ],
     products: [
+        // SwiftGodot.xcframework already contains the SwiftGodotRuntime module
+        // (statically linked, with its .swiftmodule). Shipping a separate
+        // SwiftGodotRuntime binary would register every runtime class twice.
         .library(
             name: "SwiftGodot",
-            targets: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension", "SwiftGodotMacroLibrary"]),
+            targets: ["SwiftGodot", "GDExtension", "SwiftGodotMacroLibrary"]),
     ],
     targets: [
         .binaryTarget(
             name: "SwiftGodot",
             path: "Binaries/SwiftGodot.xcframework"),
         .binaryTarget(
-            name: "SwiftGodotRuntime",
-            path: "Binaries/SwiftGodotRuntime.xcframework"),
-        .binaryTarget(
             name: "SwiftGodotMacroLibrary",
             path: "Binaries/SwiftGodotMacros.artifactbundle"),
         .target(
             name: "GDExtension",
             path: "Sources/GDExtension"),
-        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "SwiftGodotRuntime", "GDExtension"]),
+        .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "GDExtension"]),
     ]
 )
