@@ -19,11 +19,11 @@ let package = Package(
             name: "SwiftGodot",
             path: "Binaries/SwiftGodot.xcframework"),
         .binaryTarget(
+            name: "GDExtensionC",
+            path: "Binaries/GDExtensionC.xcframework"),
+        .binaryTarget(
             name: "SwiftGodotMacroLibrary",
             path: "Binaries/SwiftGodotMacros.artifactbundle"),
-        .target(
-            name: "GDExtensionC",
-            path: "Sources/GDExtension"),
         .testTarget(name: "SwiftGodotTests", dependencies: ["SwiftGodot", "GDExtensionC"]),
     ]
 )
